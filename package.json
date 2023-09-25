@@ -6,20 +6,33 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db": "json-server --watch db.json --port 4500"
   },
   "dependencies": {
+    "@tanstack/query-sync-storage-persister": "^4.33.0",
+    "@tanstack/react-query-persist-client": "^4.33.0",
     "@types/node": "20.5.7",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.15",
+    "axios": "^1.5.0",
+    "bootstrap": "^5.3.1",
     "eslint": "8.48.0",
     "eslint-config-next": "13.4.19",
+    "lodash": "^4.17.21",
     "next": "13.4.19",
     "postcss": "8.4.29",
     "react": "18.2.0",
+    "react-bootstrap": "^2.8.0",
     "react-dom": "18.2.0",
+    "sass": "^1.66.1",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "^4.33.0",
+    "@types/lodash": "^4.14.198",
+    "json-server": "^0.17.3"
   }
 }

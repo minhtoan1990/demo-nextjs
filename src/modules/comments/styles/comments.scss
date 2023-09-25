@@ -1,0 +1,26 @@
+ul.comments-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    li {
+        margin-bottom: 15px;
+        border-bottom: 1px solid;
+        padding-bottom: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.pagination {
+    margin-top: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.table-sm >:not(caption)>*>* {
+    padding: 10px;
+}
+.btn-next {
+    margin-right: 5px;;
+}
+.btn-prev {
+    margin-left: 5px;
+}
