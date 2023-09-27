@@ -33,7 +33,9 @@ const PostDetail = () => {
       <h2>{post?.id}</h2>
       <h1>Title: {post?.title}</h1>
       {post?.body ? <p>Body: {post?.body}</p> : <p>Author: {post?.author}</p>}
-      <button onClick={() => goPostComment(post?.id)}>View Comment</button>
+      <button className="me-2" onClick={() => goPostComment(post?.id)}>
+        View Comment
+      </button>
       <button onClick={() => goBack()}>Go gack</button>
     </Container>
   );
