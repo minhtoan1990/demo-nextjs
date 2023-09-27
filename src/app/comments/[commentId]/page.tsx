@@ -23,7 +23,6 @@ export async function generateMetadata(
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const id = params.commentId;
-  console.log(id);
   // fetch data
   const comment = await fetch(
     `https://jsonplaceholder.typicode.com/comments/${id}`
