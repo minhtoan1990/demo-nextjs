@@ -24,12 +24,16 @@ const PostDetail = () => {
   const goBack = () => {
     router.back();
   };
+  const goPostComment = (id: any) => {
+    router.push(`${id}/comments`);
+  };
 
   return (
     <Container>
       <h2>{post?.id}</h2>
       <h1>Title: {post?.title}</h1>
       {post?.body ? <p>Body: {post?.body}</p> : <p>Author: {post?.author}</p>}
+      <button onClick={() => goPostComment(post?.id)}>View Comment</button>
       <button onClick={() => goBack()}>Go gack</button>
     </Container>
   );

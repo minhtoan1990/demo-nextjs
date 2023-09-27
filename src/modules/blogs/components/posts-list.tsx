@@ -7,9 +7,10 @@ import { useQuery } from "@tanstack/react-query";
 
 import { paginate } from "@/until/paginate";
 import Pagination from "@/modules/pagination/components/pagination";
+import { Container } from "react-bootstrap";
 
 const PostsList = () => {
-  const pageSize = 50;
+  const pageSize = 15;
   const [currentPage, setCurrentPage] = useState(1);
 
   const {
@@ -37,11 +38,11 @@ const PostsList = () => {
   };
 
   if (isLoading) {
-    return <>Posts Loading...!</>;
+    return <Container>Posts Loading...!</Container>;
   }
 
   return (
-    <>
+    <Container>
       <h1>Posts</h1>
       <ul>
         {paginateComments?.map((item) => {
@@ -55,7 +56,7 @@ const PostsList = () => {
         currentPage={currentPage}
         onPageChange={handlePageChange}
       />
-    </>
+    </Container>
   );
 };
 export default PostsList;

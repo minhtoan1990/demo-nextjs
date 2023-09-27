@@ -1,15 +1,11 @@
-import PostDetail from "@/modules/blogs/components/post-detail";
-import type { Metadata, ResolvingMetadata } from "next";
+import PostCommentWithId from "@/modules/blogs/components/post-comment";
+import { Metadata, ResolvingMetadata } from "next";
 
-// eslint-disable-next-line @next/next/no-async-client-component
-const BlogDetail = async () => {
-  return (
-    <>
-      <PostDetail />
-    </>
-  );
+const BlogsComment = () => {
+  return <PostCommentWithId />;
 };
-export default BlogDetail;
+
+export default BlogsComment;
 
 type Props = {
   params: { id: string };

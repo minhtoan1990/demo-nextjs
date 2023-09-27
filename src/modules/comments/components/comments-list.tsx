@@ -47,7 +47,7 @@ const CommentsList = () => {
   };
 
   if (isLoading) {
-    return <>Comments Loading...!</>;
+    return <Container>Comments Loading...!</Container>;
   }
 
   return (
