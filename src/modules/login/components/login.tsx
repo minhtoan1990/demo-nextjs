@@ -5,8 +5,9 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import "../styles/login.scss";
 import { useRouter } from "next/navigation";
-import { FormEvent, useState } from "react";
+import { FormEvent, useState, useEffect } from "react";
 import Col from "react-bootstrap/Col";
+import { signIn, useSession } from "next-auth/react";
 
 // eslint-disable-next-line @next/next/no-async-client-component
 const LoginPage = () => {
@@ -15,13 +16,14 @@ const LoginPage = () => {
   const [password, setPassword] = useState("");
   const [validated, setValidated] = useState(false);
 
+  const { status } = useSession();
+
   const handlerRegister = () => {
     router.push("register");
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     const form = e.currentTarget;
-    console.log(form.checkValidity());
 
     if (form.checkValidity() === false) {
       e.preventDefault();

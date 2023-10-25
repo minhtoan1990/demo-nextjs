@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import SigninButton from "@/components/login-btn";
 
 const Header = () => {
   return (
@@ -21,8 +22,6 @@ const Header = () => {
           <Nav className="me-auto">
             <Nav.Link href="/blogs">Blogs</Nav.Link>
             <Nav.Link href="/comments">Comments</Nav.Link>
-            <Nav.Link href="/login">Login</Nav.Link>
-            <Nav.Link href="/register">Register</Nav.Link>
             <NavDropdown title="Account" id="collapsible-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">
@@ -36,7 +35,7 @@ const Header = () => {
             </NavDropdown>
           </Nav>
           <Nav>
-            <Nav.Link href="#deets">More deets</Nav.Link>
+            <SigninButton name={"Github"} />
             <Nav.Link eventKey={2} href="#memes">
               Dank memes
             </Nav.Link>
