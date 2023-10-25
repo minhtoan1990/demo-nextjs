@@ -5,7 +5,7 @@ import FloatingLabel from "react-bootstrap/FloatingLabel";
 import Form from "react-bootstrap/Form";
 import "../styles/login.scss";
 import { useRouter } from "next/navigation";
-import { FormEvent, useState, useEffect } from "react";
+import { FormEvent, useState } from "react";
 import Col from "react-bootstrap/Col";
 import { signIn, useSession } from "next-auth/react";
 
